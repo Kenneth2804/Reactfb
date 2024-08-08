@@ -1,24 +1,56 @@
 import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Todolist from './components/Todolist';
+import Timer from './components/Timer';
+import Country from './components/Country';
+import Imagen from './components/Imagen';
+import Calculadora from './components/Calculadora';
+import Toggle from './components/Toggle';
+import RadioButtonGroup from './components/RadioButtonGroup';
+import Login from './components/Login';
+import Switch from './components/Switch';
+import Contador from './components/Contador';
+import Alert from './components/Alert';
+import Box from "./components/Box"
+import QuieresSer from './components/QuieresSer';
+import Voice from './components/Voice';
+import Searchbar from './components/Searchbar';
+import Navegador from './components/Navegador';
+import Ruleta from './components/Ruleta';
+import CambioTema from './components/CambioTema';
+import Clima from './components/Clima';
+import Music from './components/Music';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+    
+        <Route path='/' element={<Ruleta />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/country' element={<Country />} />
+        <Route path='/list' element={<Todolist />} />
+        <Route path='/timer' element={<Timer />} />
+        <Route path='/imgs' element={<Imagen />} />
+        <Route path='/calc' element={<Calculadora />} />
+        <Route path='/toggle' element={<Toggle />} />
+        <Route path='/radio' element={<RadioButtonGroup />} />
+        <Route path='/switch' element={<Switch />} />
+        <Route path='/contar' element={<Contador />} />
+        <Route path='/alerta' element={<Alert />} />
+        <Route path='/box' element={<Box />} />
+        <Route path='/pregunta' element={<QuieresSer />} />
+        <Route path='/voz' element={<Voice />} />
+        <Route path='/search' element={<Searchbar />} />
+        <Route path='/tema' element={<CambioTema />} />
+        <Route path='/clima' element={<Clima />} />
+        <Route path='/music' element={<Music />} />
+   
+      </Routes>
     </div>
+</BrowserRouter>
   );
 }
 

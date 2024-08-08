@@ -1,0 +1,30 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-image img {
+    width: 600px;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .thumbnails img {
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+  
+  .thumbnails img.active,
+  .thumbnails img:hover {
+    opacity: 1;
+  }
+  

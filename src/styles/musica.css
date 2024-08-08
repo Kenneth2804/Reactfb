@@ -1,0 +1,78 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Spotify Font', Arial, sans-serif;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    color: #000000;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .searchContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1db954;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .audio {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .trackList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .trackItem {
+    margin: 10px 0;
+  }
+  
+  .trackButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1db954;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+  }
+  
