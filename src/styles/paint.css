@@ -1,0 +1,18 @@
+.canvas {
+    border: 1px solid #000;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .toolbar input[type="color"],
+  .toolbar input[type="range"],
+  .toolbar button {
+    margin-right: 10px;
+  }
+  

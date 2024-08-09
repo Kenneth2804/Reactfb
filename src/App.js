@@ -21,6 +21,7 @@ import Ruleta from './components/Ruleta';
 import CambioTema from './components/CambioTema';
 import Clima from './components/Clima';
 import Music from './components/Music';
+import Paint from './components/Paint';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
     <div className="App">
       <Routes>
     
-        <Route path='/' element={<Ruleta />} />
+        <Route path='/' element={<Paint />} />
         <Route path='/login' element={<Login />} />
         <Route path='/country' element={<Country />} />
         <Route path='/list' element={<Todolist />} />
