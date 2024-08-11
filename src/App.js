@@ -22,6 +22,7 @@ import CambioTema from './components/CambioTema';
 import Clima from './components/Clima';
 import Music from './components/Music';
 import Paint from './components/Paint';
+import YouTubePlayer from './components/YoutubePlayer';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path='/tema' element={<CambioTema />} />
         <Route path='/clima' element={<Clima />} />
         <Route path='/music' element={<Music />} />
+        <Route path='/video' element={<YouTubePlayer videoId={"xvFZjo5PgG0"} />} />
    
       </Routes>
     </div>
