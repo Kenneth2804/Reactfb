@@ -23,6 +23,7 @@ import Clima from './components/Clima';
 import Music from './components/Music';
 import Paint from './components/Paint';
 import YouTubePlayer from './components/YoutubePlayer';
+import Ahorcado from './components/Ahorcado';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Routes>
     
         <Route path='/' element={<Paint />} />
+        <Route path='/a' element={<Ahorcado />} />
         <Route path='/login' element={<Login />} />
         <Route path='/country' element={<Country />} />
         <Route path='/list' element={<Todolist />} />

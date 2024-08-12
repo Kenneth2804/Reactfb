@@ -1,0 +1,67 @@
+.hangman-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .word-container {
+    margin: 20px 0;
+  }
+  
+  .word {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  
+  .letter {
+    margin: 0 10px;
+    font-size: 36px;
+    width: 40px;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 2px solid #000;
+  }
+  
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 5px; 
+    margin: 20px 0;
+  }
+  
+  .letter-button {
+    padding: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .letter-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .letter-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .restart-button:hover {
+    background-color: #218838;
+  }
+  
