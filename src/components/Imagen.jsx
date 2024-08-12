@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react'
 import '../styles/ImageGallery.css';
 
 const images = [
@@ -8,15 +8,16 @@ const images = [
   'https://via.placeholder.com/600x400?text=Imagen+4',
 ];
 
-const Imagen = () => {
+export default function Imagen() {
+
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
     <div className="gallery">
-      <div className="main-image">
-        <img src={selectedImage} alt="Selected" />
-      </div>
-      <div className="thumbnails">
+    <div className="main-image">
+      <img src={selectedImage} alt="Selected" />
+    </div>
+    <div className="thumbnails">
         {images.map((image, index) => (
           <img
             key={index}
@@ -28,7 +29,5 @@ const Imagen = () => {
         ))}
       </div>
     </div>
-  );
-};
-
-export default Imagen;
+  )
+}
