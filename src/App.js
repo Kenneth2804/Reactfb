@@ -24,6 +24,7 @@ import Music from './components/Music';
 import Paint from './components/Paint';
 import YouTubePlayer from './components/YoutubePlayer';
 import Ahorcado from './components/Ahorcado';
+import ConvertidorTemperatura from './components/ConvertidorTemperatura';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
     
         <Route path='/' element={<Paint />} />
         <Route path='/a' element={<Ahorcado />} />
+        <Route path='/temp' element={<ConvertidorTemperatura />} />
         <Route path='/login' element={<Login />} />
         <Route path='/country' element={<Country />} />
         <Route path='/list' element={<Todolist />} />
