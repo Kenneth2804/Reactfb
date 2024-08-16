@@ -25,6 +25,7 @@ import Paint from './components/Paint';
 import YouTubePlayer from './components/YoutubePlayer';
 import Ahorcado from './components/Ahorcado';
 import ConvertidorTemperatura from './components/ConvertidorTemperatura';
+import MostrarOcultarPassword from './components/MostrarOcultarPassword;';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
     
         <Route path='/' element={<Paint />} />
         <Route path='/a' element={<Ahorcado />} />
+        <Route path='/vivo' element={<MostrarOcultarPassword />} />
         <Route path='/temp' element={<ConvertidorTemperatura />} />
         <Route path='/login' element={<Login />} />
         <Route path='/country' element={<Country />} />
