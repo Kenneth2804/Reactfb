@@ -26,6 +26,9 @@ import YouTubePlayer from './components/YoutubePlayer';
 import Ahorcado from './components/Ahorcado';
 import ConvertidorTemperatura from './components/ConvertidorTemperatura';
 import MostrarOcultarPassword from './components/MostrarOcultarPassword;';
+import Paginado from './components/Paginado';
+import Formulario from './components/Formulario';
+import StarRating from './components/StarRating';
 
 function App() {
   return (
@@ -34,7 +37,10 @@ function App() {
       <Routes>
     
         <Route path='/' element={<Paint />} />
+        <Route path='/star' element={<StarRating />} />
+        <Route path='/form' element={<Formulario />} />
         <Route path='/a' element={<Ahorcado />} />
+        <Route path='/pa' element={<Paginado />} />
         <Route path='/vivo' element={<MostrarOcultarPassword />} />
         <Route path='/temp' element={<ConvertidorTemperatura />} />
         <Route path='/login' element={<Login />} />

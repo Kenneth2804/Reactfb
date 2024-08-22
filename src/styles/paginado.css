@@ -1,0 +1,58 @@
+.contenedor {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .lista {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .item {
+    background-color: #f4f4f4;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .paginador {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .boton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .botonDeshabilitado {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+  }
+  
+  .botonActivo {
+    background-color: #0056b3;
+  }
+  
+  .numeroPagina {
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .numeroPaginaActivo {
+    background-color: #0056b3;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
