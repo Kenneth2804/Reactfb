@@ -29,6 +29,7 @@ import MostrarOcultarPassword from './components/MostrarOcultarPassword;';
 import Paginado from './components/Paginado';
 import Formulario from './components/Formulario';
 import StarRating from './components/StarRating';
+import LikeButton from './components/LikeButton';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
     
         <Route path='/' element={<Paint />} />
         <Route path='/star' element={<StarRating />} />
+        <Route path='/like' element={<LikeButton />} />
         <Route path='/form' element={<Formulario />} />
         <Route path='/a' element={<Ahorcado />} />
         <Route path='/pa' element={<Paginado />} />
