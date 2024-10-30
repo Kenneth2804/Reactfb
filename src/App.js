@@ -30,14 +30,28 @@ import Paginado from './components/Paginado';
 import Formulario from './components/Formulario';
 import StarRating from './components/StarRating';
 import LikeButton from './components/LikeButton';
+import TranslateText from './components/TranslateText';
+import VerticalGallery from './components/VerticalGallery ';
+import LandingPage from './components/LandingPage';
+import CameraWithFilters from './components/CameraWithFilters';
+import EventCalendar from './components/EventCalendar';
+import BarChart from './components/BarChart';
+import Movies from './components/Movies';
+import Calabaza from './components/Calabaza';
+import Spiderman from './Spiderman';
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
       <Routes>
-    
-        <Route path='/' element={<Paint />} />
+    {/* 
+        <Route path='/' element={<EventCalendar />} /> */}
+        <Route path='/' element={<Spiderman/>} />
+        <Route path='/paint' element={<Paint />} />
+        <Route path='/movie' element={<Movies />} />
+        <Route path='/translate' element={<TranslateText />} />
+        <Route path='/vertical' element={<VerticalGallery />} />
         <Route path='/star' element={<StarRating />} />
         <Route path='/like' element={<LikeButton />} />
         <Route path='/form' element={<Formulario />} />
@@ -63,7 +77,9 @@ function App() {
         <Route path='/tema' element={<CambioTema />} />
         <Route path='/clima' element={<Clima />} />
         <Route path='/music' element={<Music />} />
+        <Route path='/grafica' element={<BarChart />} />
         <Route path='/video' element={<YouTubePlayer videoId={"xvFZjo5PgG0"} />} />
+        
    
       </Routes>
     </div>

@@ -2,7 +2,9 @@
 
 module.exports = {
   content: [
-    "./src/components/Searchbar.jsx"
+    "./src/components/Searchbar.jsx",
+    "./src/components/Calabaza.jsx",
+    "./src/components/Spiderman.jsx"
   ],
   theme: {
     extend: {},

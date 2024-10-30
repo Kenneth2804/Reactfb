@@ -1,78 +1,70 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react'
 import "../styles/ahorcado.css";
-
-const words =
-["react", "javascript", "programming", "computer", "developer"];
 
 export default function Ahorcado() {
 
-    const [word, setWord] = useState('');
-    const [guesses, setGuesses] = useState([]);
-    const [attempts, setAttempts] = useState(6);
+  
+  const word = 'javascript';
 
-    React.useEffect(() => {
-        const randomWord = words[Math.floor(Math.random() * words.length)];
-        setWord(randomWord);
-      }, []);
+  const [guessed, setGuessed] = useState('_'.repeat(word.length).split(''));
+  const [attempts, setAttempts] = useState(6);
+  const [input, setInput] = useState('');
 
-      const handleGuess = (letter) => {
-        if (guesses.includes(letter) || attempts <= 0) return;
-    
-        setGuesses([...guesses, letter]);
-    
-        if (!word.includes(letter)) {
-          setAttempts(attempts - 1);
+  const handleGuess =() =>{
+    if (input === '' || input.length > 1) return;
+
+    if(word.includes(input)){
+
+      const newGuessed = [...guessed];
+      for (let i = 0; i < word.length; i++) {
+        if (word[i] === input) {
+          newGuessed[i] = input;
         }
-      };
+      }
+      setGuessed(newGuessed);
 
-      const getDisplayWord = () => {
-        return word.split('').map(letter => (guesses.includes(letter) ? letter : '_')).join(' ');
-      };
-    
-      const isGameOver = attempts <= 0 || getDisplayWord().indexOf('_') === -1;
+    }else {
+      setAttempts(attempts - 1);
+    }
+    setInput('');
+
+
+  }
+
+  const handleInputChange = (e) => {
+    setInput(e.target.value.toLowerCase());
+  };
 
   return (
     <div className="hangman-container">
-        <h1>Juego del Ahorcado</h1>
-        <div className="word-container">
-          <p className="word">{getDisplayWord()}</p>
-        </div>
-        <p>Intentos restantes: {attempts}</p>
+      <h1>Juego del Ahorcado</h1>
 
-        <div>
-          {isGameOver ? (
-            <h2>{getDisplayWord().indexOf('_') === -1 ? '¡Ganaste!' : '¡Perdiste!'}</h2>
-          ) : (
-            <div className="button-container">
-              {Array.from(Array(26)).map((_, index) => {
-                const letter = String.fromCharCode(index + 65).toLowerCase();
-                return (
-                  <button
-                    key={index}
-                    onClick={() => handleGuess(letter)}
-                    className={`letter-button ${guesses.includes(letter) ? 'disabled' : ''}`}
-                    disabled={guesses.includes(letter)}
-                  >
-                    {letter}
-                  </button>
-                );
-              })}
-            </div>
-          )}
- </div>
-        {isGameOver && (
-          <button
-            className="restart-button"
-            onClick={() => {
-              setWord(words[Math.floor(Math.random() * words.length)]);
-              setGuesses([]);
-              setAttempts(6);
-            }}
-          >
-            Reiniciar
-          </button>
-        )}
+      <div className="hangman-figure">
+        <div className={`hangman-part ${attempts <= 5 ? 'visible' : ''}`} id="head"></div>
+        <div className={`hangman-part ${attempts <= 4 ? 'visible' : ''}`} id="body"></div>
+        <div className={`hangman-part ${attempts <= 3 ? 'visible' : ''}`} id="left-arm"></div>
+        <div className={`hangman-part ${attempts <= 2 ? 'visible' : ''}`} id="right-arm"></div>
+        <div className={`hangman-part ${attempts <= 1 ? 'visible' : ''}`} id="left-leg"></div>
+        <div className={`hangman-part ${attempts === 0 ? 'visible' : ''}`} id="right-leg"></div>
+      </div>
 
+      <p className="word">Palabra: {guessed.join(' ')}</p>
+      <p className="attempts">Intentos restantes: {attempts}</p>
+
+      
+      <div className="input-container">
+        <input 
+          type="text" 
+          value={input} 
+          onChange={handleInputChange} 
+          maxLength="1" 
+          placeholder="Adivina una letra" 
+        />
+        <button onClick={handleGuess}>Adivinar</button>
+      </div>
+
+      {attempts === 0 && <p className="game-over">Perdiste. La palabra era <strong>{word}</strong>.</p>}
+      {!guessed.includes('_') && <p className="winner">¡Ganaste! La palabra es <strong>{word}</strong>.</p>}
     </div>
   )
 }

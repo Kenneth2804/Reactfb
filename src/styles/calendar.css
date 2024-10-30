@@ -1,0 +1,104 @@
+/* src/styles/calendar.css */
+
+.calendar-container {
+    margin: 20px;
+  }
+  
+  .rbc-toolbar {
+    background-color: #f1f3f4;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .rbc-toolbar button {
+    color: #1a73e8;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .rbc-toolbar button:hover {
+    background-color: #f1f3f4;
+  }
+  
+  .rbc-toolbar-label {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .rbc-event {
+    background-color: #1a73e8;
+    border-radius: 4px;
+    padding: 2px 5px;
+  }
+  
+  .rbc-month-view {
+    border: 1px solid #e0e0e0;
+  }
+  
+  .rbc-today {
+    background-color: #e8f0fe;
+  }
+  
+  .rbc-header {
+    background-color: #f1f3f4;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .rbc-current-time-indicator {
+    background-color: #d93025;
+  }
+  
+  /* Estilos para el popup */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  h2{
+    color: black;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .popup-content h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .popup-content p {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  .popup-content button {
+    background-color: #1a73e8;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-content button:hover {
+    background-color: #1558b0;
+  }
+  

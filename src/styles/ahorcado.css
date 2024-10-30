@@ -1,67 +1,134 @@
+body {
+  background-color: #f3f4f6;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .hangman-container {
-    text-align: center;
-    margin-top: 50px;
-    font-family: Arial, sans-serif;
-    color: white;
-  }
-  
-  .word-container {
-    margin: 20px 0;
-  }
-  
-  .word {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-  
-  .letter {
-    margin: 0 10px;
-    font-size: 36px;
-    width: 40px;
-    text-align: center;
-    display: inline-block;
-    border-bottom: 2px solid #000;
-  }
-  
-  .button-container {
-    display: grid;
-    grid-template-columns: repeat(13, 1fr);
-    gap: 5px; 
-    margin: 20px 0;
-  }
-  
-  .letter-button {
-    padding: 10px 0;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .letter-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .letter-button.disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .restart-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .restart-button:hover {
-    background-color: #218838;
-  }
-  
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+}
+
+h1 {
+  color: #3b82f6;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.word, .attempts, .game-over, .winner {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #374151;
+}
+
+.hangman-figure {
+  position: relative;
+  width: 120px;
+  height: 200px;
+  margin: 20px auto;
+  border-left: 4px solid #374151;
+  border-top: 4px solid #374151;
+  border-radius: 5px;
+}
+
+.hangman-part {
+  position: absolute;
+  display: none;
+  background-color: #374151;
+}
+
+.hangman-part.visible {
+  display: block;
+}
+
+#head {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #374151;
+  border-radius: 50%;
+  top: 20px;
+  left: 40px;
+}
+
+#body {
+  width: 3px;
+  height: 60px;
+  top: 60px;
+  left: 58px;
+}
+
+#left-arm, #right-arm, #left-leg, #right-leg {
+  width: 40px;
+  height: 3px;
+}
+
+#left-arm {
+  top: 80px;
+  left: 18px;
+  transform: rotate(-30deg);
+}
+
+#right-arm {
+  top: 80px;
+  left: 60px;
+  transform: rotate(30deg);
+}
+
+#left-leg {
+  top: 130px;
+  left: 18px;
+  transform: rotate(-30deg);
+}
+
+#right-leg {
+  top: 130px;
+  left: 60px;
+  transform: rotate(30deg);
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #3b82f6;
+  font-size: 1rem;
+  width: 50px;
+  text-align: center;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+.game-over {
+  color: #ef4444;
+}
+
+.winner {
+  color: #10b981;
+}

@@ -1,0 +1,224 @@
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #f3e8ff; /* Fondo púrpura claro */
+  color: #4b007d; /* Texto púrpura */
+}
+
+/* El contenedor principal debe ocupar toda la pantalla */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Mínimo de alto igual a la pantalla */
+}
+
+/* Header */
+header {
+  background-color: #ffa726; /* Naranja claro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 3rem 3rem;
+  padding: 0 16px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  width: 100vh;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header nav a {
+  font-size: 18px;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ff9800;
+}
+
+/* Secciones */
+section {
+  padding: 3rem 1rem;
+  width: 100%;
+}
+
+.bg-purple-200 {
+  background-color: #e0bbff;
+}
+
+.bg-orange-200 {
+  background-color: #ffd699;
+}
+
+/* Estilo de los botones */
+button {
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button.bg-orange-400 {
+  background-color: #ffa726;
+  color: #4b007d;
+}
+
+button.bg-orange-400:hover {
+  background-color: #ff9800;
+}
+
+button.border-purple-600 {
+  border: 2px solid #7b1fa2;
+  color: #7b1fa2;
+}
+
+button.border-purple-600:hover {
+  background-color: #7b1fa2;
+  color: #ffffff;
+}
+
+/* Ajustes de texto */
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.25rem;
+  color: #4b007d;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grilla de juegos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Cartas de juegos */
+.card {
+  background-color: #e0bbff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #4b007d;
+}
+
+.card p {
+  color: #6a1b9a;
+}
+
+/* Footer */
+footer {
+  background-color: #ffa726;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #d4d4d4;
+}
+
+footer p {
+  font-size: 0.875rem;
+  color: #4b007d;
+}
+
+footer a {
+  font-size: 0.875rem;
+  color: #4b007d;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* Elementos decorativos flotantes */
+.fixed-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.fixed-elements svg {
+  position: absolute;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.fixed-elements .moon {
+  top: 1rem;
+  right: 1rem;
+  animation-name: pulse;
+}
+
+.fixed-elements .star {
+  top: 3rem;
+  left: 1rem;
+  animation-name: bounce;
+}
+
+.fixed-elements .ghost {
+  bottom: 2rem;
+  left: 2rem;
+  animation-name: bounce;
+}
+
+.fixed-elements .skull {
+  bottom: 1rem;
+  right: 2rem;
+  animation-name: pulse;
+}
+
+/* Animaciones */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

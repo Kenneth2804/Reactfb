@@ -1,0 +1,31 @@
+.container {
+    text-align: center;
+  }
+  
+  .webcam-container {
+    position: relative;
+    width: 640px;
+    height: 480px;
+    margin: 0 auto;
+  }
+  
+  .filters {
+    margin-top: 10px;
+  }
+  
+  .filters button {
+    margin: 0 5px;
+  }
+  
+  .photo-container {
+    margin-top: 10px;
+  }
+  
+  .photo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .photo.sepia {
+    filter: sepia(1);
+  }
